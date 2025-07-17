@@ -124,5 +124,5 @@ Website dirancang **responsif**, **user-friendly**, dan menarik untuk generasi d
 Proyek ini membuktikan bahwa produk lokal seperti makaroni pedas bisa ditingkatkan nilai jualnya melalui digitalisasi. Dengan branding yang tepat dan strategi pemasaran yang cerdas, **MacRAM** berpotensi menjadi snack kekinian favorit generasi muda yang **viral** dan **mudah diakses secara online**.
 
 ---
-
-> Made with ❤️ by Kelompok 11 – Proyek E-Business
+> Link Wireframe : https://www.figma.com/design/BfiB5V6zrtmO2H2tWb1vYL/Untitled?node-id=9-309&t=hC2LV1v1wd6p036m-0
+> Made with by Kelompok 11 – Proyek E-Business

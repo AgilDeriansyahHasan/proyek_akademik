@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="30.0" xmlns:fx="http://javafx.com/fxml" fx:controller="src.tugasbesar.controllers.MedicineOrderController"
+      style="-fx-padding: 30px; -fx-background-color: #2c3e50; -fx-border-color: #34495e; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+
+    <!-- Header -->
+    <Label text="Pemesanan Obat" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #ecf0f1; -fx-effect: dropshadow(gaussian, black, 1, 0.3, 2, 2);"/>
+
+    <!-- Daftar Obat -->
+    <VBox spacing="20" style="-fx-padding: 15px; -fx-background-color: #34495e; -fx-border-color: #7f8c8d; -fx-border-radius: 10; -fx-background-radius: 10;">
+        <Label text="Daftar Obat" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ecf0f1;"/>
+        <TableView fx:id="medicineTable" prefWidth="600" style="-fx-background-color: #ecf0f1; -fx-border-color: #bdc3c7; -fx-border-radius: 5;">
+            <columns>
+                <TableColumn fx:id="medicineNameColumn" text="Nama Obat" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="medicinePriceColumn" text="Harga" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="medicineActionColumn" text="Action" style="-fx-alignment: CENTER;"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Input Jumlah dan Tambah ke Keranjang -->
+    <VBox spacing="20" style="-fx-padding: 15px; -fx-background-color: #34495e; -fx-border-color: #7f8c8d; -fx-border-radius: 10; -fx-background-radius: 10;">
+        <HBox spacing="10" alignment="CENTER">
+            <Label text="Jumlah:" style="-fx-font-size: 14px; -fx-text-fill: #ecf0f1;"/>
+            <TextField fx:id="quantityField" promptText="Jumlah" style="-fx-font-size: 14px; -fx-background-radius: 5;"/>
+            <Button text="Tambah ke Keranjang" style="-fx-font-size: 14px; -fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 8px 16px; -fx-background-radius: 5;"/>
+        </HBox>
+    </VBox>
+
+    <!-- Keranjang Belanja -->
+    <VBox spacing="20" style="-fx-padding: 15px; -fx-background-color: #34495e; -fx-border-color: #7f8c8d; -fx-border-radius: 10; -fx-background-radius: 10;">
+        <Label text="Keranjang Belanja" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #ecf0f1;"/>
+        <TableView fx:id="cartTable" prefWidth="600" style="-fx-background-color: #ecf0f1; -fx-border-color: #bdc3c7; -fx-border-radius: 5;">
+            <columns>
+                <TableColumn fx:id="cartMedicineNameColumn" text="Nama Obat" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="cartQuantityColumn" text="Jumlah" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="cartPriceColumn" text="Harga" style="-fx-alignment: CENTER;"/>
+            </columns>
+        </TableView>
+        <Label fx:id="totalPriceLabel" text="Total Harga: Rp 0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #ecf0f1;"/>
+        <Button text="Bayar" onAction="#handlePayment" style="-fx-font-size: 14px; -fx-background-color: #27ae60; -fx-text-fill: white; -fx-padding: 8px 16px; -fx-background-radius: 5;"/>
+    </VBox>
+
+    <!-- Tombol kembali ke dashboard -->
+    <HBox alignment="CENTER" spacing="10">
+        <Button text="Kembali ke Dashboard" onAction="#handleBackToDashboard" style="-fx-font-size: 14px; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 8px 16px; -fx-background-radius: 5;"/>
+    </HBox>
+</VBox>

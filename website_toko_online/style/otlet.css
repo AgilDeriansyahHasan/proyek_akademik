@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', 'Times New Roman', Times, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: whitesmoke;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #787EE0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fefefe;
+}
+
+.logo:hover {
+    color: black;
+    transition: 0.5s;
+}
+
+ .nav-bar ul {
+    display: flex;
+ }
+
+ .nav-bar ul li a {
+    display: block;
+    color: #fefefe;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+    font-weight: 500;
+    font-size: 18px;
+ }
+
+ .nav-bar ul li a:hover{
+    transition: 0.5s;
+    color: #110111;
+ }
+
+  .outlet-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .outlet-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .outlet-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .outlet-item {
+    background-color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .outlet-image {
+    background-color: #ccc;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+
+  .outlet-item h4 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+  }
+
+  .outlet-item p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .map-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.map-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+  z-index: 2;
+  pointer-events: none; /* supaya tidak mengganggu klik di iframe */
+}
+
+.map-info {
+  max-width: 250px;
+  text-align: left;
+  font-size: 14px;
+}

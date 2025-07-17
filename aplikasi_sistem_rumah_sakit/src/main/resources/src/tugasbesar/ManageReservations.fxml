@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="30.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.tugasbesar.controllers.ReservationController" style="-fx-padding: 20px; -fx-background-color: #f9fafc;">
+    <!-- Header -->
+    <Label text="Halaman Reservasi Kamar" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <!-- Form untuk menambahkan reservasi baru -->
+    <VBox spacing="20" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-border-color: #dfe6e9; -fx-border-radius: 12; -fx-background-radius: 12;">
+        <Label text="Tambah Reservasi Baru" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #34495e;"/>
+
+        <GridPane hgap="12" vgap="12" alignment="CENTER" style="-fx-background-color: #f9fafc; -fx-padding: 15px;">
+            <TextField fx:id="reservationIdField" promptText="ID Reservasi" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"/>
+            <TextField fx:id="patientNameField" promptText="Nama Pasien" GridPane.rowIndex="0" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"/>
+            <TextField fx:id="doctorNameField" promptText="Nama Dokter" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"/>
+            <TextField fx:id="dateField" promptText="Tanggal Reservasi" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"/>
+            <TextField fx:id="timeField" promptText="Waktu" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"/>
+            <TextField fx:id="statusField" promptText="Status (Dijadwalkan/Selesai)" GridPane.rowIndex="2" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"/>
+            <ComboBox fx:id="roomTypeComboBox" promptText="Pilih Tipe Kamar" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-size: 14px; -fx-padding: 8px; -fx-border-color: #bdc3c7; -fx-border-radius: 5;"/>
+            <Label fx:id="facilitiesLabel" text="Fasilitas: -" GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-font-size: 14px; -fx-text-fill: #7f8c8d;"/>
+        </GridPane>
+
+        <HBox alignment="CENTER_RIGHT" spacing="12">
+            <Button text="Kirim" onAction="#handleSubmit" style="-fx-font-size: 14px; -fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5; -fx-cursor: hand;"/>
+        </HBox>
+    </VBox>
+
+    <!-- Tabel untuk menampilkan daftar reservasi -->
+    <VBox spacing="15" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-border-color: #dfe6e9; -fx-border-radius: 12; -fx-background-radius: 12;">
+        <Label text="Daftar Reservasi" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #34495e;"/>
+
+        <TableView fx:id="reservationTable" prefHeight="300" prefWidth="600" style="-fx-background-color: #ecf0f1; -fx-border-color: #dfe6e9; -fx-border-radius: 6;">
+            <columns>
+                <TableColumn fx:id="reservationIdColumn" text="ID Reservasi" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="patientNameColumn" text="Nama Pasien" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="doctorNameColumn" text="Dokter" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="dateColumn" text="Tanggal" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="timeColumn" text="Waktu" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="statusColumn" text="Status" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="roomTypeColumn" text="Tipe Kamar" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="facilitiesColumn" text="Fasilitas" style="-fx-alignment: CENTER;"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Tombol kembali ke dashboard -->
+    <HBox alignment="CENTER" spacing="15">
+        <Button text="Kembali ke Dashboard" onAction="#handleBackToDashboard" style="-fx-font-size: 14px; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5; -fx-cursor: hand;"/>
+    </HBox>
+</VBox>

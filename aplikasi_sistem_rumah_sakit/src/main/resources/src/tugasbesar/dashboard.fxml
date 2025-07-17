@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<VBox alignment="CENTER" spacing="25.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="src.tugasbesar.controllers.DashboardController"
+      style="-fx-padding: 30px; -fx-background-color: #2c3e50; -fx-border-color: #34495e; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+
+    <!-- Header -->
+    <VBox alignment="CENTER" spacing="10.0">
+        <Label text="Dashboard Rumah Sakit"
+               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #ecf0f1; -fx-effect: dropshadow(gaussian, black, 1, 0.3, 2, 2);"/>
+        <Label fx:id="welcomeDashboardText" text="Selamat datang, [Nama User]"
+               style="-fx-font-size: 18px; -fx-text-fill: #bdc3c7;"/>
+    </VBox>
+
+    <!-- Divider -->
+    <Line startX="0" endX="400" stroke="#7f8c8d" strokeWidth="1.5" />
+
+    <!-- Statistik -->
+    <VBox spacing="15.0" alignment="CENTER">
+        <Label text="Statistik Hari Ini"
+               style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #ecf0f1;"/>
+        <HBox spacing="30.0" alignment="CENTER">
+            <VBox alignment="CENTER" spacing="8.0">
+                <Label text="Pasien Baru"
+                       style="-fx-font-size: 14px; -fx-text-fill: #bdc3c7;"/>
+                <Label fx:id="newPatientsCount" text="0"
+                       style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #27ae60;"/>
+            </VBox>
+            <VBox alignment="CENTER" spacing="8.0">
+                <Label text="Reservasi Aktif"
+                       style="-fx-font-size: 14px; -fx-text-fill: #bdc3c7;"/>
+                <Label fx:id="activeReservationsCount" text="0"
+                       style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #27ae60;"/>
+            </VBox>
+            <VBox alignment="CENTER" spacing="8.0">
+                <Label text="Obat Terjual"
+                       style="-fx-font-size: 14px; -fx-text-fill: #bdc3c7;"/>
+                <Label fx:id="medicinesSoldCount" text="0"
+                       style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #27ae60;"/>
+            </VBox>
+        </HBox>
+    </VBox>
+
+    <!-- Divider -->
+    <Line startX="0" endX="400" stroke="#7f8c8d" strokeWidth="1.5" />
+
+    <!-- Navigasi -->
+    <HBox spacing="15.0" alignment="CENTER">
+        <Button text="Kelola Pasien" fx:id="managePatientsButton"
+                onAction="#onManagePatientsButtonClick"
+                style="-fx-font-size: 14px; -fx-background-color: #264653; -fx-text-fill: white; -fx-cursor: hand; -fx-padding: 10px 20px; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, black, 1, 0.3, 2, 2);"/>
+        <Button text="Reservasi Kamar" fx:id="manageReservationsButton"
+                onAction="#onManageReservationsButtonClick"
+                style="-fx-font-size: 14px; -fx-background-color: #2A9D8F; -fx-text-fill: white; -fx-cursor: hand; -fx-padding: 10px 20px; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, black, 1, 0.3, 2, 2);"/>
+        <Button text="Pemesanan Obat" fx:id="manageMedicinesButton"
+                onAction="#onManageMedicinesButtonClick"
+                style="-fx-font-size: 14px; -fx-background-color: #E9C46A; -fx-text-fill: white; -fx-cursor: hand; -fx-padding: 10px 20px; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, black, 1, 0.3, 2, 2);"/>
+        <Button text="Laporan" fx:id="viewReportsButton"
+                onAction="#onViewReportsButtonClick"
+                style="-fx-font-size: 14px; -fx-background-color: #F4A261; -fx-text-fill: white; -fx-cursor: hand; -fx-padding: 10px 20px; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, black, 1, 0.3, 2, 2);"/>
+    </HBox>
+</VBox>

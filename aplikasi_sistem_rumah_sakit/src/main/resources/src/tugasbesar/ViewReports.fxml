@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="30.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.tugasbesar.controllers.ViewReportsController" style="-fx-padding: 20px; -fx-background-color: #f9fafc;">
+
+    <!-- Header Section -->
+    <Label text="Laporan Rumah Sakit" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <!-- Doctor Statistics Section -->
+    <VBox spacing="20" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-border-color: #dfe6e9; -fx-border-radius: 12; -fx-background-radius: 12;">
+        <Label text="Statistik Dokter Berdasarkan Spesialisasi" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #34495e;"/>
+
+        <TableView fx:id="doctorStatisticsTable" prefHeight="150.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #dfe6e9; -fx-border-radius: 6;">
+            <columns>
+                <TableColumn text="Spesialisasi" fx:id="specializationColumn" prefWidth="200.0" style="-fx-alignment: CENTER;"/>
+                <TableColumn text="Dokter" fx:id="doctorColumn" prefWidth="300.0" style="-fx-alignment: CENTER;"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Medicine Statistics Section -->
+    <VBox spacing="20" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-border-color: #dfe6e9; -fx-border-radius: 12; -fx-background-radius: 12;">
+        <Label text="Statistik Obat Terjual" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #34495e;"/>
+
+        <TableView fx:id="medicineStatisticsTable" prefHeight="150.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #dfe6e9; -fx-border-radius: 6;">
+            <columns>
+                <TableColumn text="Nama Obat" fx:id="medicineNameColumn" prefWidth="200.0" style="-fx-alignment: CENTER;"/>
+                <TableColumn text="Harga (Rp)" fx:id="priceColumn" prefWidth="150.0" style="-fx-alignment: CENTER;"/>
+                <TableColumn text="Jumlah Terjual" fx:id="quantitySoldColumn" prefWidth="150.0" style="-fx-alignment: CENTER;"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Room Statistics Section -->
+    <VBox spacing="20" style="-fx-padding: 20px; -fx-background-color: #ffffff; -fx-border-color: #dfe6e9; -fx-border-radius: 12; -fx-background-radius: 12;">
+        <Label text="Statistik Kamar" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #34495e;"/>
+
+        <TableView fx:id="roomStatisticsTable" prefHeight="150.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #dfe6e9; -fx-border-radius: 6;">
+            <columns>
+                <TableColumn text="Tipe Kamar" fx:id="roomTypeColumn" prefWidth="200.0" style="-fx-alignment: CENTER;"/>
+                <TableColumn text="Jumlah Reservasi" fx:id="reservationsColumn" prefWidth="200.0" style="-fx-alignment: CENTER;"/>
+            </columns>
+        </TableView>
+    </VBox>
+
+    <!-- Back Button -->
+    <Button text="Kembali" onAction="#handleBackToDashboard" style="-fx-font-size: 14px; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 6; -fx-cursor: hand;"/>
+</VBox>

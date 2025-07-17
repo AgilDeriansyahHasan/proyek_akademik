@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Testimoni Pelanggan - MacRAM</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,500&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <a href="#home" class="logo">MacRAM</a>
+    <nav class="nav-bar" aria-label="Primary Navigation">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="tentangkami.html">Tentang Kami</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="otlet.html">Outlet</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="testimonial.html" class="active" aria-current="page">Testimoni</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="testimonial" id="testimonial" role="region" aria-label="Testimoni Pelanggan">
+    <article class="slideshow-container">
+      <h2 class="testimonial-title">Apa Kata Mereka?</h2>
+
+      <section class="mySlides fade" aria-live="polite">
+        <p>
+          Pertama kali coba MacRAM langsung jatuh cinta! Macaroninya gurih, pedasnya pas, dan teksturnya renyah banget. Cocok banget buat teman nonton atau ngemil sore.
+        </p>
+        <div class="profil">
+          <img src="image/profiltesti3.jpg" alt="Foto Armansyah" />
+          <div class="nama">
+            <h6>Maulana</h6>
+          </div>
+        </div>
+      </section>
+
+      <section class="mySlides fade" aria-live="polite">
+        <p>
+          Pelayanannya cepat dan ramah, pesanan langsung sampai tanpa nunggu lama. Rasanya pun konsisten enak! Pasti order lagi, cocok buat ide hampers juga.
+        </p>
+        <div class="profil">
+          <img src="image/profiltesti2.jpg" alt="Foto Annisa" />
+          <div class="nama">
+            <h6>Agil</h6>
+          </div>
+        </div>
+      </section>
+
+      <section class="mySlides fade" aria-live="polite">
+        <p>
+          Saya suka banget varian rasa MacRAM! Dari yang original sampai keju pedas, semuanya nagih. Bungkusnya juga praktis jadi gampang dibawa ke kampus atau kerja.
+        </p>
+        <div class="profil">
+          <img src="image/profiltesti1.jpg" alt="Foto Deriansyah" />
+          <div class="nama">
+            <h6>Ramancha</h6>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigasi Tombol -->
+      <button class="prev" aria-label="Testimoni sebelumnya" onclick="plusSlides(-1)">❮</button>
+      <button class="next" aria-label="Testimoni berikutnya" onclick="plusSlides(1)">❯</button>
+    </article>
+  </main>
+
+  <!-- Optional Hamburger Menu Icon (jika pakai responsive navbar JS) -->
+  <div class="hamburger" role="button" tabindex="0" aria-label="Menu">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <script src="java/java.js"></script>
+</body>
+</html>

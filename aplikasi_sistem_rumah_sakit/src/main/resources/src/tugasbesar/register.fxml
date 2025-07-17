@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="src.tugasbesar.controllers.RegisterController"
+      style="-fx-background-color: #2c3e50; -fx-border-color: #34495e; -fx-border-width: 2px; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-padding: 20px;">
+
+    <!-- Label Header -->
+    <Label text="Create a New Account"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #ecf0f1; -fx-effect: dropshadow(gaussian, black, 1, 0.3, 2, 2);"/>
+
+    <!-- Divider -->
+    <Line startX="0" endX="300" stroke="#7f8c8d" strokeWidth="1.5" />
+
+    <!-- Username Field -->
+    <TextField fx:id="usernameField" promptText="Username"
+               style="-fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-background-color: #ecf0f1;"/>
+
+    <!-- Password Field -->
+    <PasswordField fx:id="passwordField" promptText="Password"
+                   style="-fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-background-color: #ecf0f1;"/>
+
+    <!-- Confirm Password Field -->
+    <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password"
+                   style="-fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #bdc3c7; -fx-background-color: #ecf0f1;"/>
+
+    <!-- Register Button -->
+    <Button text="Register" onAction="#onRegisterButtonClick"
+            style="-fx-font-size: 16px; -fx-background-color: #27ae60; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-background-radius: 5; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, black, 1, 0.3, 2, 2);"/>
+
+</VBox>

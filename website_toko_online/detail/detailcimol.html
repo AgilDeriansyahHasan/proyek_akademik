@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Produk - Makaroni Kering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background: #fff;
+      max-width: 500px;
+      width: 100%;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .product-image {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    label {
+      font-weight: 500;
+      display: block;
+      margin: 12px 0 6px;
+    }
+
+    .radio-group label {
+      font-weight: normal;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .level-group {
+      margin-top: 10px;
+      padding-left: 10px;
+      display: none;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .quantity button {
+      width: 32px;
+      height: 32px;
+      font-size: 18px;
+      border: none;
+      background: #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .quantity input {
+      width: 40px;
+      text-align: center;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .add-btn {
+      width: 100%;
+      background: #333;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .add-btn:hover {
+      background-color: #111;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="../image/cimol.png" alt="Makaroni Kering" class="product-image">
+
+    <h2>Cimol</h2>
+
+    <label>Kemasan</label>
+    <div class="radio-group">
+      <label><input type="radio" name="kemasan" value="bungkus"> Bungkus Rp 6.000 (50g)</label>
+      <label><input type="radio" name="kemasan" value="toples" checked> Toples Rp 20.000 (200g)</label>
+    </div>
+
+    <label>Pilih Rasa</label>
+    <div class="radio-group" id="rasaGroup">
+      <label><input type="radio" name="rasa" value="original" checked> Original</label>
+      <label><input type="radio" name="rasa" value="keju"> Keju</label>
+      <label><input type="radio" name="rasa" value="bbq"> BBQ</label>
+      <label><input type="radio" name="rasa" value="balado"> Balado</label>
+      <label><input type="radio" name="rasa" value="pedas"> Pedas</label>
+    </div>
+
+    <div class="level-group" id="levelPedas">
+      <label>Level Pedas (1–5)</label>
+      <div class="radio-group">
+        <label><input type="radio" name="level" value="1"> Level 1</label>
+        <label><input type="radio" name="level" value="2"> Level 2</label>
+        <label><input type="radio" name="level" value="3"> Level 3</label>
+        <label><input type="radio" name="level" value="4"> Level 4</label>
+        <label><input type="radio" name="level" value="5"> Level 5</label>
+      </div>
+    </div>
+
+    <div class="quantity">
+      <button onclick="updateQty(-1)">−</button>
+      <input type="number" id="qty" value="1" min="1" readonly>
+      <button onclick="updateQty(1)">+</button>
+    </div>
+
+   <a href="../keranjang.html" style="text-decoration: none;">
+  <button class="add-btn">
+    🛒 Tambahkan ke Keranjang
+  </button>
+</a>
+
+    <a href="../menu.html" class="back-link">Kembali ke Menu</a>
+  </div>
+
+  <script>
+    function updateQty(change) {
+      const input = document.getElementById("qty");
+      let val = parseInt(input.value);
+      if (change === -1 && val > 1) input.value = val - 1;
+      else if (change === 1) input.value = val + 1;
+    }
+
+    const rasaRadios = document.getElementsByName("rasa");
+    rasaRadios.forEach = Array.prototype.forEach;
+    rasaRadios.forEach(radio => {
+      radio.addEventListener("change", () => {
+        const levelGroup = document.getElementById("levelPedas");
+        if (radio.value === "pedas" && radio.checked) {
+          levelGroup.style.display = "block";
+        } else {
+          levelGroup.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

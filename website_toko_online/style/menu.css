@@ -1,0 +1,182 @@
+/* ========== Reset & Font ========== */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', 'Times New Roman', Times, sans-serif;
+}
+
+body {
+  background: whitesmoke;
+}
+
+/* ========== Header ========== */
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #787EE0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fefefe;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: black;
+  transition: 0.5s;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a {
+  display: block;
+  color: #fefefe;
+  padding: 10px 25px;
+  border-radius: 50px;
+  margin: 0 5px;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+  color: #110111;
+}
+
+/* ========== Section Produk ========== */
+.produk {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px 20px;
+  background-color: #f2f2f2;
+  position: relative; /* Untuk positioning cart */
+  text-align: center;
+}
+
+/* ========== Menu Header (Judul + Cart) ========== */
+.menu-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.menu-header h2 {
+  font-size: 28px;
+  color: #333;
+  margin: 0;
+}
+
+/* ========== Cart Icon ========== */
+.cart-icon-top {
+  position: absolute;
+  right: 0;
+  font-size: 24px;
+  text-decoration: none;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.cart-icon-top:hover {
+  color: #000;
+}
+
+/* ========== Grid Layout Produk ========== */
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* ========== Item Produk ========== */
+.produk-item {
+  background-color: #d9d9d9;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gambar-placeholder {
+  width: 100%;
+  height: 150px;
+  background-color: #e0e0e0;
+  border: 2px solid #999;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* ========== Judul Produk ========== */
+.produk-item h4 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* ========== Deskripsi Produk ========== */
+.produk-item p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* ========== Tombol Tambah ke Keranjang ========== */
+.produk-item button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.produk-item button:hover {
+  background-color: #555;
+}
+
+/* ========== Responsive (Opsional) ========== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  .nav-bar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .produk {
+    padding: 30px 10px;
+  }
+
+  .menu-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cart-icon-top {
+    position: static;
+    align-self: flex-end;
+  }
+}
